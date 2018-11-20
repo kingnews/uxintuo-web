@@ -1,0 +1,305 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>优信托网，投资理财一站式服务平台</title>
+    <meta content="信托" name="keywords">
+    <meta content="信托" name="description">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--<link rel="stylesheet" href="./css/base.css" />-->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/kefu.css">
+    <link rel="icon" href="./img/navagitor.jpg" type="image/x-icon"/>
+    <script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+    <meta name="format-detection" content="telephone=no"/>
+    <style>
+        .word-layout{line-height: 32px;  margin: 10px 10px 0; font-size: 14px;  color: #333;}
+    </style>
+</head>
+<body>
+<!--滚动导航-->
+<div class="n-nav slideUp disnone">
+    <div class="wrapper"> <img src="./img/logo_head.jpg" class="fl mt5 slideUpImg">
+        <ul class="n-nav-lst f16 tac fl">
+            <li class="fl relative"><a href="./affiance.html" class="head-nav-item">信托</a></li>
+            <li class="fl"><a href="./ziguan.html" class="head-nav-item">资管</a></li>
+            <li class="fl"><a href="./foundation.html" class="head-nav-item">基金</a></li>
+            <li class="fl"><a href="./governmentdebt.html" class="head-nav-item nnav-label">私募债</a></li>
+            <!--<li class="fl"><a href="./stock.html" class="col333">股权</a></li>-->
+            <!--<li class="fl"><a href="javascript:;" class="nnav-label col333">保险</a></li>-->
+        </ul>
+        <div class="fr clearfix">
+            <p class="n-nav-nbr f32 col336699 fl relative"> <i class="n-nav-icon1 absolute"></i>021-31664002</p>
+        </div>
+    </div>
+</div>
+
+
+
+<!--logo和搜索框-->
+<div class="searchbg">
+    <div class="search-head wrapper relative clearfix">
+        <a class="fl" href="/"><img src="./img/logo_head.jpg" class="logo-img"></a>
+        <div class="search-sch fl">
+            <div class="search-sch-mn f14 mb5 xintuopdt-search-list">
+                <div class="fl h36ln36" id="showHideSel">
+                    <span class="xintuo-copy-val" style="display: inline-block;width: 48px;text-align: center;" data-type="">全部</span>
+                    <img src="./img/downmove.png" class="downmove">
+                    <div class="xintuopdt-search-select-div" style="display: none;">
+                        <ul class="xintuopdt-search-select-ul">
+                            <li data-type="">全部</li>
+                            <li data-type="4">信托</li>
+                            <li data-type="5">资管</li>
+                            <li data-type="6">基金</li>
+                            <li data-type="7">私募债</li>
+                            <li data-type="13">股权</li>
+                            <li data-type="14">保险</li>
+                        </ul>
+                    </div>
+                </div>
+                <input name="" type="text" placeholder="请输入搜索关键字" onkeyup="onKeyUpButton(this)" class="search-ipt search-value" maxlength="30" value="">
+                <input name="" type="button" class="search-btn colfff search-product" onclick="searchProduct(this);" value="搜索">
+                <div class="disnone search-tabs-list">
+                    <a href="javascript:;">全部</a>
+                    <a href="javascript:;">信托</a>
+                    <a href="javascript:;">资管</a>
+                    <a href="javascript:;">基金</a>
+                    <a href="javascript:;">私募债</a>
+                    <a href="javascript:;">股权</a>
+                    <a href="javascript:;">保险</a>
+                </div>
+            </div>
+            <span>
+                <a target="_blank" href=""
+                   class="col999 mr20 f12">信托投资
+                </a>
+                <a target="_blank" href=""
+                   class="col999 mr20 f12">信托资产
+                </a>
+            </span>
+
+        </div>
+        <div class="search-tel fr">
+            <!--电话logo存放处-->
+            <i></i>
+            <p class="f32 col336699">021-31664002</p>
+        </div>
+
+
+    </div>
+</div>
+
+
+<!--网站首页导航条-->
+<div class="menubg">
+    <div class="content">
+        <ul class="menu">
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./affiance.html">信托</a></li>
+            <li><a href="./ziguan.html">资管</a></li>
+            <li><a href="./foundation.html">基金</a></li>
+            <li><a href="./governmentdebt.html">私募债</a></li>
+            <li><a href="./stock.html">股权</a></li>
+            <li  class="hover"><a href="./assurance.html">保险</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="container">
+
+    <!--推荐产品-->
+    <div class="wrapper">
+        <div class="bank-product-list2 relative clear">
+            <div class="smgq-tt clearfix"> <span class="col333 f20 bank-product-name">推荐产品</span> </div>
+            <ul class="clearfix assurance-list">
+
+<!--
+                <li class="no-bright">
+                    <h4 class="f24 relative bank-product-tt clearfix mt54">
+                        <span class="textOver"><a target="_blank" title="光大信托蓬安公路" class="col333" href="">光大信托蓬安公路</a></span> </h4>
+                    <div class="bank-product-mnc">
+                        <div>
+                            <p class="bank-product-nbr f48 col336699 tac"><span>8</span>-<span>10<em class="f24">%</em></span></p>
+                            <p class="f14 col9c tac">预期年化收益率</p>
+                        </div>
+                        <div class="tar bank-product-keyword f14 tac"><span class="mr22">基础设施</span><span>12+12月</span> </div>
+                        <div class="clear"></div>
+                    </div>
+                    <a href="" target="_blank" class="bank-product-yy tac">预约</a>
+                </li>
+
+                <li class="no-bright">
+                    <h4 class="f24 relative bank-product-tt clearfix mt54">
+                        <span class="textOver"><a target="_blank" title="中江信托·金兔36号" class="col333" href="">中江信托·金兔36号</a></span> </h4>
+                    <div class="bank-product-mnc">
+                        <div>
+                            <p class="bank-product-nbr f48 col336699 tac"><span>8</span>-<span>10<em class="f24">%</em></span></p>
+                            <p class="f14 col9c tac">预期年化收益率</p>
+                        </div>
+                        <div class="tar bank-product-keyword f14 tac"><span class="mr22">基础设施</span><span>12+12月</span> </div>
+                        <div class="clear"></div>
+                    </div>
+                    <a href="" target="_blank" class="bank-product-yy tac">预约</a>
+                </li>
+
+                <li class="no-bright">
+                    <h4 class="f24 relative bank-product-tt clearfix mt54">
+                        <span class="textOver"><a target="_blank" title="ZJ信托金鹤462号铜仁万山" class="col333" href="">ZJ信托金鹤462号铜仁万山</a></span> </h4>
+                    <div class="bank-product-mnc">
+                        <div>
+                            <p class="bank-product-nbr f48 col336699 tac"><span>8</span>-<span>10<em class="f24">%</em></span></p>
+                            <p class="f14 col9c tac">预期年化收益率</p>
+                        </div>
+                        <div class="tar bank-product-keyword f14 tac"><span class="mr22">基础设施</span><span>12+12月</span> </div>
+                        <div class="clear"></div>
+                    </div>
+                    <a href="" target="_blank" class="bank-product-yy tac">预约</a>
+                </li>
+
+                <li class="no-bright">
+                    <h4 class="f24 relative bank-product-tt clearfix mt54">
+                        <span class="textOver"><a target="_blank" title="BR信托兴义城投" class="col333" href="">BR信托兴义城投</a></span> </h4>
+                    <div class="bank-product-mnc">
+                        <div>
+                            <p class="bank-product-nbr f48 col336699 tac"><span>8</span>-<span>10<em class="f24">%</em></span></p>
+                            <p class="f14 col9c tac">预期年化收益率</p>
+                        </div>
+                        <div class="tar bank-product-keyword f14 tac"><span class="mr22">基础设施</span><span>12+12月</span> </div>
+                        <div class="clear"></div>
+                    </div>
+                    <a href="" target="_blank" class="bank-product-yy tac">预约</a>
+                </li>
+
+                <li class="no-bright">
+                    <h4 class="f24 relative bank-product-tt clearfix mt54">
+                        <span class="textOver"><a target="_blank" title="BR信托兴义城投" class="col333" href="">BR信托兴义城投</a></span> </h4>
+                    <div class="bank-product-mnc">
+                        <div>
+                            <p class="bank-product-nbr f48 col336699 tac"><span>8</span>-<span>10<em class="f24">%</em></span></p>
+                            <p class="f14 col9c tac">预期年化收益率</p>
+                        </div>
+                        <div class="tar bank-product-keyword f14 tac"><span class="mr22">基础设施</span><span>12+12月</span> </div>
+                        <div class="clear"></div>
+                    </div>
+                    <a href="" target="_blank" class="bank-product-yy tac">预约</a>
+                </li>
+-->
+
+
+
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <!--推荐产品列表-->
+    <div class="wrapper mb45">
+        <div class="bgfff mt45">
+            <div class="word-layout">
+                fasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsf
+                fasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsf
+                fasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsf
+                fasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsf
+                fasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsf
+                fasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsf
+                fasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsf
+                fasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsffasdfsf
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="wrapper clearfix">
+    <div class="com-partner">
+        <h6 class="com-partner-head">合作伙伴</h6>
+        <ul class="clearfix">
+            <li><img src="./img/img_partner1.jpg" alt=""></li>
+            <li><img src="./img/img_partner2.jpg" alt=""></li>
+            <li><img src="./img/img_partner3.jpg" alt=""></li>
+            <li><img src="./img/img_partner4.jpg" alt=""></li>
+            <li><img src="./img/img_partner5.jpg" alt=""></li>
+            <li><img src="./img/img_partner6.jpg" alt=""></li>
+        </ul>
+        <ul class="clearfix">
+            <li><img src="./img/img_partner7.jpg" alt=""></li>
+            <li><img src="./img/img_partner8.jpg" alt=""></li>
+            <li><img src="./img/img_partner9.jpg" alt=""></li>
+            <li><img src="./img/img_partner10.jpg" alt=""></li>
+            <li><img src="./img/img_partner11.jpg" alt=""></li>
+            <li><img src="./img/img_partner12.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>
+
+<div class="wrapper clearfix com-partner-list2">
+    <div class="com-partner2">
+        <div>
+            版权所有 Copyright 2017 uxintuo.cn , All Rights Reserved
+        </div>
+        <div>
+            沪ICP备18016600号<em class="mr70">|</em>投资有风险，购买需谨慎
+        </div>
+    </div>
+</div>
+
+<!--在线客服  -->
+<div class="scrollsidebar" id="scrollsidebar">
+    <div class="side_content">
+        <div class="side_list">
+            <div class="side_title"><a title="隐藏" class="close_btn"><span>关闭</span></a></div>
+            <div class="side_center">
+                <div class="custom_service">
+                    <p><img src="./img/button_11.gif" alt=""></p>
+                    <p> <a title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2230258300&amp;site=qq&amp;menu=yes" target="_blank">在线客服①</a> </p>
+                    <p><img src="./img/button_11.gif" alt=""></p>
+                    <p> <a title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2168956008&amp;site=qq&amp;menu=yes" target="_blank">在线客服②</a> </p>
+                    <!--<p> <a title="点击这里给我发消息" href="###" target="_blank">在线客服②</a> </p>-->
+                </div>
+                <div class="other">
+                    <p><img src="./img/personcode.jpg" width="120"/></p>
+                    <p class="other-public">微信服务号</p>
+                    <p class="other-phone text-left padding-bottom">客服电话：</p>
+                    <p class="other-phone text-left padding-top">021-31664002</p>
+                </div>
+                <!-- <div class="msgserver">
+                     <p><a href="###" >联系我们</a></p>
+                 </div>-->
+            </div>
+            <div class="side_bottom"></div>
+        </div>
+    </div>
+    <div class="show_btn"><span>在线客服</span></div>
+</div>
+<script type="text/javascript" src="./js/kefu.js"></script>
+
+<script src="./js/common.js"></script>
+<script>
+    recommendProduct(".assurance-list", 14, 5);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="page-header">账户密码修改</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label class="control-label">旧密码：</label></div>
+				<div class="col-md-10"><input type="password" class="form-control" id="oldPassword"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label class="control-label">新密码：</label></div>
+				<div class="col-md-10"><input type="password" class="form-control" id="newPassword"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label class="control-label">重复新密码：</label></div>
+				<div class="col-md-10"><input type="password" class="form-control" id="validatePaw"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12"><input type="button" class="btn btn-success" value="确定" onclick="upPaw()"/></div>
+			</div>
+		</div>
+		<script src="../vendor/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/layer.js" ></script>
+		<script type="text/javascript" src="../js/config.js" ></script>
+		<script>
+			function upPaw(){
+				var newPaw = $("#newPassword").val();
+				var vaPaw = $("#validatePaw").val();
+				var oldPaw = $("#oldPassword").val();
+				
+				if(oldPaw == '' || oldPaw == undefined){
+					layer.msg("请输入旧密码！");
+					return;
+				}
+				if(newPaw != vaPaw){
+					layer.msg("两次密码输入错误！");
+					return;
+				}
+				
+				$.ajax({
+					type:"post",
+					url:API_PATH + "/admin/user/updatePassword",
+					async:true,
+					data:{
+						oldPassword:oldPaw,
+						newPassword:newPaw
+					},
+					success:function(data){
+						if(data.error == false){
+							layer.msg("成功！");
+						}else{
+							layer.msg(data.message);
+						}
+					}
+				});
+			}
+			
+		</script>
+	</body>
+
+</html>

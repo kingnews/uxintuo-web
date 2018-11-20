@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>信托管理后台</title>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<!-- Bootstrap Core CSS -->
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- MetisMenu CSS -->
+<link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="../vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-static-top" role="navigation"
+			style="margin-bottom: 0">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">信托管理</a>
+			</div>
+			<!-- /.navbar-header -->
+
+			<ul class="nav navbar-top-links navbar-right">
+
+				<!-- /.dropdown -->
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i>
+						<i class="fa fa-caret-down"></i>
+				</a>
+					<ul class="dropdown-menu dropdown-user">
+						<li><a href="#"><i class="fa fa-user fa-fw"></i>
+								{{username}}</a></li>
+						<!--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>-->
+						<li class="divider"></li>
+						<li><a href="#" onclick="logout()"><i
+								class="fa fa-sign-out fa-fw"></i> 退出</a></li>
+					</ul> <!-- /.dropdown-user --></li>
+				<!-- /.dropdown -->
+			</ul>
+			<!-- /.navbar-top-links -->
+
+			<div class="navbar-default sidebar" role="navigation">
+				<div class="sidebar-nav navbar-collapse">
+					<ul class="nav" id="side-menu">
+						<li><a href="#webInfo" id="webInfo"
+							onclick="openpPage('webInfo.html')"><i
+								class="fa fa-dashboard fa-fw"></i> 网站信息</a></li>
+						<li><a href="#productList" id="productList"
+							onclick="openpPage('productList.html')"><i
+								class="fa fa-table fa-fw"></i> 产品列表</a></li>
+						<li><a href="#productType" id="productType"
+							onclick="openpPage('productType.html')"><i
+								class="fa fa-table fa-fw"></i> 产品分类</a></li>
+						<li><a href="#insurance" id="insurance"
+							onclick="openpPage('insurance.html')"><i
+								class="fa fa-edit fa-fw"></i> 保险管理</a></li>
+						<li><a href="#admin" id="admin"
+							onclick="openpPage('admin.html')"><i class="fa fa-edit fa-fw"></i>
+								账号管理</a></li>
+						<li><a href="#reservation" id="reservation"
+							onclick="openpPage('reservation.html')"><i
+								class="fa fa-edit fa-fw"></i> 预约管理</a></li>
+					</ul>
+				</div>
+				<!-- /.sidebar-collapse -->
+			</div>
+			<!-- /.navbar-static-side -->
+		</nav>
+
+		<div id="page-wrapper">
+			<iframe frameborder="no" id="page" name="page" width='100%'
+				height='100%' scrolling="no" onload="changeFrameHeight()"></iframe>
+		</div>
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- jQuery -->
+	<script src="../vendor/jquery/jquery.min.js"></script>
+	<script src="../js/jquery.cookie.js"></script>
+	<script src="../js/layer.js"></script>
+	<script src="../js/config.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Metis Menu Plugin JavaScript -->
+	<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+	<script src="../dist/js/sb-admin-2.js"></script>
+
+
+	<script>
+		function changeFrameHeight() {
+			var ifm = document.getElementById("page");
+			ifm.height = document.documentElement.clientHeight;
+		}
+		window.onresize = function() {
+			changeFrameHeight();
+		}
+
+		var thisId = window.location.hash;
+		if (thisId != "") {
+			var url = thisId.replace("#", "") + ".html";
+			document.getElementById('page').src = "../pages/" + url;
+			$("#side-menu a").attr("class", "");
+			$(thisId).attr("class", "active")
+		} else {
+			document.getElementById('page').src = "../pages/webInfo.html";
+		}
+		function openpPage(url) {
+			document.getElementById('page').src = url;
+		}
+		function currentUser() {
+			$.ajax({
+				url : API_PATH + "/admin/user/current",
+				success : function(data) {
+					if (data.error == false) {
+						app.username = data.data.username
+					}
+				}
+			})
+		}
+		function logout() {
+			$.cookie('au_token', null, {
+				path : '/'
+			});
+			top.location.href = "login.html"
+		}
+		var app = new Vue({
+			el : '#wrapper',
+			data : {
+				username : 'null'
+			}
+		})
+		var lastTime = new Date().getTime();
+		var currentTime = new Date().getTime();
+		var timeOut = 20 * 60 * 1000; //设置超时时间： 10分 1分钟=60秒 10分钟=10*60秒  1秒=1000毫秒
+		$(function() {
+			currentUser();
+			/* 鼠标移动事件 */
+			$(document).mouseover(function() {
+				lastTime = new Date().getTime(); //更新操作时间
+			});
+		});
+		function timeOutAndLogout() {
+			currentTime = new Date().getTime(); //更新当前时间
+			if (currentTime - lastTime > timeOut) { //判断是否超时
+				logout();
+			}
+		}
+		/* 定时器  间隔1秒检测是否长时间未操作页面  */
+		window.setInterval(timeOutAndLogout, 8000);
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+/*信托产品公共样式*/
+table tr td {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.f20{font-size: 20px;}
+.f12{font-size: 12px;}
+.lineh44{line-height: 44px;}
+.w-840 {
+    width: 840px;
+}
+
+
+
+
+
+/*产品详情左边栏*/
+.container{width: 1200px; margin: 0 auto;}
+.pt10{padding-top: 10px;}
+.mr10{margin-right: 10px;}
+.productContainer {
+    position: relative;
+    box-shadow: 0 1px 2px #e5e5e5;
+}
+.bg-white {
+    background: #ffffff;
+}
+.smallerTitle {
+    font-size: 12px;
+    color: #999999;
+    height: 16px;
+    line-height: 16px;
+}
+
+
+.productContainer .navigator {
+    border-bottom: solid 1px #E5E5E5;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #999999;
+}
+
+.productContainer .productTitle {
+    padding: 25px 0px 31px 30px;
+    position: relative;
+}
+
+.productContainer .productLogo {
+    width: 120px;
+    height: 120px;
+}
+
+.productContainer .productSaleInfo {
+    padding: 0 23px 28px 120px;
+}
+
+.productContainer .horizonPadding25 {
+    padding: 0 25px;
+}
+
+.productContainer .productSaleInfo table {
+    width: 680px;
+}
+
+.productContainer .productSaleInfo table th {
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+    padding-top: 14px;
+}
+
+.productContainer .productSaleInfo table td {
+    text-align: center;
+    padding-top: 21px;
+    font-size: 16px;
+    width: 25%;
+}
+
+.productContainer .productSaleInfo.five table td {
+    width: 20%;
+}
+
+.productContainer .productSaleInfo table tr .smallerTitle {
+    text-align: center;
+    padding-top: 21px;
+    font-size: 12px;
+}
+
+.productContainer .bottomMenu {
+    padding: 21px 23px 23px 20px;
+    color: #9B9B9B;
+    border-top: solid 1px #e5e5e5;
+}
+
+.rightSide {
+    width: 680px;
+}
+
+.rightSideUl {
+    width: 100%;
+}
+
+.rightSideUl li {
+    width: 33%;
+}
+
+.rightSideUl-xg {
+    overflow: hidden;
+}
+
+.rightSideUl-xg ul {
+    margin-left: -1px;
+}
+
+.rightSideUl-xg li {
+    padding-bottom: 30px;
+}
+
+.pevc .rightSideUl li {
+    width: 33%;
+}
+.leftDotBorder{
+    border-left: dotted 1px #D6D6D6;
+}
+.collectProgress {
+    height: 6px;
+    width: 280px;
+    background: #E2E2E2;
+    position: relative;
+    border-radius: 3px;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.realProgress {
+    float: left;
+    background-color: #f36e27;
+    width: 53%;
+    border-radius: 3px;
+    height: 6px;
+}
+.pd010{padding: 0 10px;}
+.pt10{padding-top: 10px;}
+.c-f36e27{color: #f36e27;}
+
+
+/*产品详情*/
+.detailContianer {
+    margin-top: 10px;
+    background: #ffffff;
+    padding-right: 20px;
+}
+
+.detailTitle {
+    height: 52px;
+    line-height: 52px;
+    border-bottom: solid 1px #e5e5e5;
+}
+
+.detailTitle.common {
+    font-size: 16px;
+    color: #666666;
+    padding-left: 20px;
+}
+
+.detailTitle>a {
+    position: relative;
+    top: -1px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #666666;
+    cursor: pointer;
+}
+.mediumTitle {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    color: #666666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.pb25{padding-bottom: 25px;}
+.detailContianer table tr td {
+    padding: 25px 0px 20px 20px;
+    vertical-align: top;
+}
+.pb40{padding-bottom: 40px!important;}
+
+.bottomMenu table tr td {
+    padding: 25px 10px 0 10px;
+    vertical-align: top;
+}
+
+.tableLable {
+    font-size: 18px;
+    font-weight: 700;
+    color: #428BCA;
+}
+
+.tableValue {
+    font-size: 14px;
+    color: #666666;
+}
+
+.rightDotBorder {
+    border-right: dotted 1px #D6D6D6;
+}
+
+
+
+/*产品详情右边栏*/
+.w-350{width: 350px;}
+
+.appoint-common-padding {
+    padding: 0px 30px;
+}
+
+
+
+.p-d-appoint-frame {
+    padding: 20px 30px;
+    box-shadow: 0 1px 2px #e5e5e5;
+}
+
+.p-d-appoint-frame .int-frame {
+    margin-top: 20px;
+}
+
+.p-d-appoint-frame>.int-frame>.int {
+    display: block;
+    padding: 10px 0 10px 10px;
+    width: 272px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    border: solid 1px #e5e5e5;
+    border-radius: 3px;
+}
+
+.p-d-appoint-frame>.int-frame>.int.sp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    color: #c1c1c1;
+}
+
+.p-d-appoint-frame>.int-frame>.dw {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background-color: #fff;
+    height: 27px;
+    line-height: 27px;
+}
+
+.p-d-appoint-frame>.int-frame>.int:focus,
+.p-d-appoint-frame>.int-frame>.int:hover {
+    border: solid 1px #428BCA;
+}
+
+.p-d-appoint-frame>a {
+    display: block;
+    margin-top: 0px;
+    padding: 10px 0 10px 10px;
+    width: 130px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 3px;
+    border: solid 1px #428BCA;
+    background-color: #428BCA;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.p-d-appoint-frame>a:hover{
+    color: white!important;
+}
+
+.p-d-appoint-frame.bg-ccc {
+    background-color: #fff;
+}
+
+.p-d-appoint-frame.bg-ccc>.int-frame>.int:focus,
+.p-d-appoint-frame.bg-ccc>.int-frame>.int:hover {
+    border: solid 1px #e5e5e5;
+}
+
+.p-d-appoint-frame.bg-ccc>a {
+    background: #fca983;
+    border: solid 1px #fca983;
+    cursor: default;
+}
+
+.p-d-appoint-frame.bg-ccc>.int-frame>.int {
+    cursor: default;
+}
+
+.p-d-appoint-frame.bg-ccc>.int-frame>.int.sp {
+    cursor: default;
+    color: #e8e8e8;
+}
+.p-bottom10{padding-bottom: 10px;}
+
+
+.red-color{color: red;}
+.w110{width: 110px;}
+.text-align{text-align: center;}
+.pdl40{padding-left: 40px!important;}
+.with130{width: 130px\9;}
+
+
+
+
+
+
+
+
+
+
+

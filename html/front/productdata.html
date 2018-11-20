@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优信托网|找优质信托，就上优信托网</title>
+    <meta content="信托" name="keywords">
+    <meta content="信托" name="description">
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/kefu.css">
+    <link rel="stylesheet" href="./css/productdata.css">
+    <link href="./css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/kefu.css">
+    <link rel="stylesheet" type="text/css" href="./css/pagination.css">
+    <link rel="icon" href="./img/navagitor.jpg" type="image/x-icon"/>
+    <script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="./js/layer/layer.js"></script>
+    <!--<script type="text/javascript" src="./js/pagination.min.js"></script>-->
+    <meta name="format-detection" content="telephone=no"/>
+    <style>
+        .select-tab-ty{
+            overflow: hidden;
+            box-shadow:0px 0px 5px #ececec;
+            position: absolute;
+            left: -4px;
+            top: 72px;
+            height: 284px;
+            width: 520px;
+            background-color: white;
+        }
+        .select-tab-text-ty{
+            text-align: left;
+            margin-top: 10px;
+        }
+        .select-tab-text-ty>div>a{
+            font-size: 14px;
+            color: #666666;
+        }
+        .select-tab-text-ty>div{
+            border-bottom: 1px solid white;
+            cursor: pointer;
+        }
+
+        .select-tab-text-ty:hover>div>a{
+            color: #F36E27;
+            border-bottom: 1px solid #F36E27;
+        }
+        .select-tab-text-right-ty{
+            display: inline-block;
+            cursor: pointer;
+            border-bottom: 1px solid white;
+        }
+        .select-tab-text-right-ty>a{
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .select-tab-text-right-ty>a:hover{
+            color: #F36E27;
+            border-bottom: 1px solid #F36E27;
+        }
+        .fund_ty{
+            display: none;
+        }
+
+        .p-d-appoint-frame{
+            padding: 7px 0px;
+        }
+        .p-d-appoint-frame .int-frame{
+            margin-top: 10px;
+        }
+        .parent select{
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            -webkit-appearance:none;
+            -moz-appearance:none;
+            appearance:none;
+            background:transparent;
+            border:none;
+            padding-left:10px;
+            width: 102px;
+            height:100%;
+        }
+        #p-d-appoint-submit{
+            width:272px;
+            margin: 15px 0px 0px 30px;
+        }
+        .disabledinput:hover {
+            border:solid 1px #e5e5e5 !important;
+        }
+        .display{display: none;}
+        .product-htmlText, .product-htmlDetail{
+            font-size: 18px;
+        }
+        .product-htmlText tr th, .product-htmlText tr td{ border:2px solid #e61616; }
+    </style>
+</head>
+
+
+<body class="bg-f5f5f5" style="">
+
+
+<!--滚动导航-->
+<div class="n-nav slideUp disnone">
+    <div class="wrapper"> <img src="./img/logo_head.jpg" class="fl mt5 slideUpImg">
+        <ul class="n-nav-lst f16 tac fl">
+            <li class="fl relative"><a href="./affiance.html" class="head-nav-item">信托</a></li>
+            <li class="fl"><a href="./ziguan.html" class="head-nav-item">资管</a></li>
+            <li class="fl"><a href="./foundation.html" class="head-nav-item">基金</a></li>
+            <li class="fl"><a href="./governmentdebt.html" class="head-nav-item nnav-label">私募债</a></li>
+            <!--<li class="fl"><a href="./stock.html" class="col333">股权</a></li>-->
+            <!--<li class="fl"><a href="javascript:;" class="nnav-label col333">保险</a></li>-->
+        </ul>
+        <div class="fr clearfix">
+            <p class="n-nav-nbr f32 col336699 fl relative"> <i class="n-nav-icon1 absolute"></i>021-31664002</p>
+        </div>
+    </div>
+</div>
+
+
+<!--logo和搜索框-->
+<div class="searchbg">
+    <div class="search-head wrapper relative clearfix">
+        <a class="fl" href="javascript:;"><img src="./img/logo_head.jpg" class="logo-img"></a>
+        <div class="search-sch fl">
+            <div class="search-sch-mn f14 mb5 xintuopdt-search-list">
+                <div class="fl h36ln36" id="showHideSel">
+                    <span class="xintuo-copy-val" style="display: inline-block;width: 48px;text-align: center;" data-type="">全部</span>
+                    <img src="./img/downmove.png" class="downmove">
+                    <div class="xintuopdt-search-select-div" style="display: none;">
+                        <ul class="xintuopdt-search-select-ul">
+                            <li data-type="">全部</li>
+                            <li data-type="4">信托</li>
+                            <li data-type="5">资管</li>
+                            <li data-type="6">基金</li>
+                            <li data-type="7">私募债</li>
+                            <!--<li data-type="13">股权</li>-->
+                            <!--<li data-type="14">保险</li>-->
+                        </ul>
+                    </div>
+                </div>
+                <input name="" type="text" placeholder="输入产品名称或关键词查找" onkeyup="onKeyUpButton(this)" class="search-ipt search-value" maxlength="30" value="">
+                <!--<input name="" type="text" placeholder="输入产品名称或关键词查找" value="输入产品名称或关键词查找" onfocus="if(this.value=='输入产品名称或关键词查找'){this.value=''}" onblur="if(this.value==''){this.value='输入产品名称或关键词查找'}" onkeyup="onKeyUpButton(this)" class="search-ipt search-value" maxlength="30" >-->
+                <input name="" type="button" class="search-btn colfff search-product" onclick="searchProduct();" value="搜索">
+                <div class="disnone search-tabs-list">
+                    <a href="javascript:;">全部</a>
+                    <a href="javascript:;">信托</a>
+                    <a href="javascript:;">资管</a>
+                    <a href="javascript:;">基金</a>
+                    <a href="javascript:;">私募债</a>
+                    <!--<a href="javascript:;">股权</a>-->
+                    <!--<a href="javascript:;">保险</a>-->
+                </div>
+            </div>
+            <span>
+                <a href="javascript:;"
+                   class="col999 mr20 f12">基础设施
+                </a>
+                <a href="javascript:;"
+                   class="col999 mr20 f12">工商企业
+                </a>
+                <a href="javascript:;"
+                   class="col999 mr20 f12">金融市场
+                </a>
+                <a href="javascript:;"
+                   class="col999 mr20 f12">房地产
+                </a>
+                <a href="javascript:;"
+                   class="col999 mr20 f12">其他
+                </a>
+            </span>
+
+        </div>
+        <div class="search-tel fr">
+            <!--电话logo存放处-->
+            <i></i>
+            <p class="f32 col336699">021-31664002</p>
+            <div>
+                 <span>
+                <a target="_blank" href=""
+                   class="col999 mr20 f12">周一到周五：9:00-20:00
+                </a><br />
+                <a target="_blank" href=""
+                   class="col999 mr20 f12">周六到周日：9:00-17:00
+                </a>
+                </span>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<!--网站首页导航条-->
+<div class="menubg">
+    <div class="content">
+        <ul class="menu menu-navbar">
+            <li data-nav=""><a href="./index.html">首页</a></li>
+            <li data-nav="4"><a href="./affiance.html">信托</a></li>
+            <li data-nav="5"><a href="./ziguan.html">资管</a></li>
+            <li data-nav="6"><a href="./foundation.html">基金</a></li>
+            <li data-nav="7"><a href="./governmentdebt.html">私募债</a></li>
+            <!--<li data-nav="13"><a href="./stock.html">股权</a></li>-->
+            <!--<li data-nav="14"><a href="./assurance.html">保险</a></li>-->
+        </ul>
+    </div>
+</div>
+
+
+<div class="">
+    <div class="container pt10 clearfix p-r" id="product-detail-container">
+        <div class="fl w-840 mr10">
+
+            <div class="productContainer bg-white">
+
+                <div class="navigator product-head"><a class="toptitle" href="/" rel="nofollow">首页</a>&nbsp;&gt;&nbsp;
+                    <a class="toptitle product-typeid color428BCA" href="#" title="" id="tis"></a> &gt;&nbsp;
+                    <a class="toptitle product-item color428BCA" href="#"></a>
+                </div>
+
+            </div>
+
+
+
+            <div class="detailContianer">
+                <div class="detailTitle p-d-detail-l-title clear" style="overflow: visible;height: 52px;line-height: 52px;">
+                    <a class="fl on">产品详情</a>
+                </div>
+                <div class="p-d-detail-qa">
+                    <div class="clearfix">
+                        <table style="width: 100%" class="pb25" cellspacing="0" cellpadding="0">
+                            <tbody class="product-htmlText">
+                            <!--<tr><td class="tableLable pb40" width="120px">产品名称：</td><td width="380px" class="f20">'+productRecords.title+'</td><td class="tableLable" width="120px">产品状态：</td><td width="180px" class="f20">'+productStatusVal+'</td></tr><tr><td class="tableLable" width="90px">产品期限：</td><td width="380px" class="f20">'+productRecords.term+"个月"+'</td><td class="tableLable w110" >付息方式：</td><td width="180px" class="f20">'+productRecords.interest+'</td></tr><tr><td class="tableLable" width="90px">投资领域：</td><td width="180px" class="f20">'+productRecords.investmentAreasName+'</td><td class="tableLable w110 text-align">规模：</td><td width="380px" class="f20">'+itemScale+'</td></tr><tr><td class="tableLable display-blk" width="80px">预期年化收益率：</td><td width="240px" class="f20"><div>'+itemIncomeIntro+'</td></tr>-->
+                            </tbody></table>
+
+                        <div class="line topDotBorder projectBenefits">
+                        </div>
+                        <div class="p-b-25 p-bottom10">
+                            <table width="100%"  cellspacing="0" cellpadding="0">
+                                <tbody class="product-htmlDetail">
+                                <!--<tr><td class="tableLable" width="110px">募集账号：</td><td><p>'+itemRaiseAccount+'</p></td></tr><tr><td class="tableLable">融资主体：</td><td>'+itemFinancingSubject+'</td></tr><tr><td class="tableLable">资金用途：</td><td>'+itemUseOfFunds+'</td></tr><tr><td class="tableLable">还款来源：</td><td>'+itemPaymentSource+'</td></tr><tr><td class="tableLable">风控措施：</td><td class="lh-25">'+itemRiskControl+'</td></tr><tr><td class="tableLable">项目亮点：</td><td class="lh-25" id="trust_highlights">'+itemProjectHighlights+'</td></tr>-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="fl w-350 p-r">
+            <div class="w-344" id="#" style="position:inherit ">
+                <div class="p-d-appoint-frame bg-fff c-666 bg-white">
+                    <div style="border-bottom: 1px solid #E5E5E5;" class="appoint-common-padding">
+                        <p class="clearfix lineh44">
+                            <span class="fl f20">预约</span>
+                            <span class="fr f12 color428BCA">您也可以拨打客服电话/咨询在线客服</span>
+                        </p>
+                    </div>
+                    <div class="p-r int-frame radio-custom appoint-common-padding" style="display: none">
+                        <span>投资者类型:</span>
+                        <input type="hidden" id="customerType" value="0">
+                        <input type="radio" checked="checked" name="customerType" value="个人" id="sunflower">
+                        <label for="sunflower"> 个人</label>
+                        <span class="ge-ren"></span>
+
+                        <input type="radio" name="customerType" value="机构" id="core">
+                        <label for="core"> 机构</label>
+                        <span class="ji-gou"></span>
+
+                    </div>
+                    <div class="p-r int-frame appoint-common-padding">
+                        <input id="p-d-appoint-name" type="text" onkeyup="onKeyUpButton(this)"  minlength="2" maxlength="20" class="int appointment-name" placeholder="您的姓名" value="您的姓名" onfocus="if(this.value=='您的姓名'){this.value=''}" onblur="if(this.value==''){this.value='您的姓名'}">
+                    </div>
+                    <div class="appoint-common-padding">
+                        <span class="int red-color appointment-name-iden"></span>
+                    </div>
+                    <div class="p-r int-frame appoint-common-padding">
+                        <input id="p-d-appoint-amount" type="text" onkeyup="onKeyUpButton(this)" maxlength="20" class="int appointment-phone" placeholder="您的联系电话/微信/qq" value="您的联系电话/微信/qq"  onfocus="if(this.value=='您的联系电话/微信/qq'){this.value=''}" onblur="if(this.value==''){this.value='您的联系电话/微信/qq'}" autocomplete="off">
+                    </div>
+                    <div class="appoint-common-padding">
+                        <span class="int red-color appointment-phone-iden"></span>
+                    </div>
+                    <a id="p-d-appoint-submit" class="come-appointment">立即预约</a>
+                </div>
+                <div class="p-d-ap-footer product-app-footer">
+                    <h3 class="product-app-h3">交易流程</h3>
+                    <img class="product-app-img" src="./img/product_appoint.png">
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="wrapper clearfix">
+    <div class="com-partner">
+        <h6 class="com-partner-head">合作伙伴</h6>
+        <ul class="clearfix">
+            <li><img src="./img/img_partner1.jpg" alt=""></li>
+            <li><img src="./img/img_partner2.jpg" alt=""></li>
+            <li><img src="./img/img_partner3.jpg" alt=""></li>
+            <li><img src="./img/img_partner4.jpg" alt=""></li>
+            <li><img src="./img/img_partner5.jpg" alt=""></li>
+            <li><img src="./img/img_partner6.jpg" alt=""></li>
+        </ul>
+        <ul class="clearfix">
+            <li><img src="./img/img_partner7.jpg" alt=""></li>
+            <li><img src="./img/img_partner8.jpg" alt=""></li>
+            <li><img src="./img/img_partner9.jpg" alt=""></li>
+            <li><img src="./img/img_partner10.jpg" alt=""></li>
+            <li><img src="./img/img_partner11.jpg" alt=""></li>
+            <li><img src="./img/img_partner12.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>
+
+<div class="wrapper clearfix com-partner-list2">
+    <div class="com-partner2">
+        <div>
+            版权所有 Copyright 2017 uxintuo.cn , All Rights Reserved
+        </div>
+        <div>
+            沪ICP备18016600号<em class="mr70">|</em>投资有风险，购买需谨慎
+        </div>
+    </div>
+</div>
+
+
+<!--在线客服  -->
+<div class="scrollsidebar" id="scrollsidebar">
+    <div class="side_content">
+        <div class="side_list">
+            <div class="side_title"><a title="隐藏" class="close_btn"><span>关闭</span></a></div>
+            <div class="side_center">
+                <div class="custom_service">
+                    <p><a title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2230258300&amp;site=qq&amp;menu=yes" target="_blank"><img src="./img/button_11.gif" alt=""></a></p>
+                    <p> <a title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2230258300&amp;site=qq&amp;menu=yes" target="_blank">在线客服①</a> </p>
+                    <p><a  title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2168956008&amp;site=qq&amp;menu=yes" target="_blank"><img src="./img/button_11.gif" alt=""></a></p>
+                    <p> <a title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2168956008&amp;site=qq&amp;menu=yes" target="_blank">在线客服②</a> </p>
+                    <!--<p> <a title="点击这里给我发消息" href="###" target="_blank">在线客服②</a> </p>-->
+                </div>
+                <div class="other">
+                    <p><img src="./img/personcode.jpg" width="120"/></p>
+                    <p class="other-public">微信服务号</p>
+                    <p class="other-phone text-left padding-bottom">客服热线：</p>
+                    <p class="other-phone text-left padding-top">021-31664002</p>
+                </div>
+                <!-- <div class="msgserver">
+                     <p><a href="###" >联系我们</a></p>
+                 </div>-->
+            </div>
+            <div class="side_bottom"></div>
+        </div>
+    </div>
+    <!--<div class="show_btn"><span>在线客服</span></div>-->
+</div>
+<script type="text/javascript" src="./js/kefu.js"></script>
+
+
+<!--<script src="./js/common.js"></script>-->
+<script src="./js/productdata.js"></script>
+	<script>
+		var strList = "100万≤X＜300万	8.8%；↵300万≤X＜1000万	9.2%；↵1000万≤X＜3000万	9.5%；↵3000万≤X	待定；"
+	</script>
+<script>
+    var replaceVal = $(".replace-value").text();
+//    console.log(replaceVal);
+    var str1 = replaceVal.replace(new RegExp(";|；","gm"),"<br/>");
+//    console.log(str1);
+    $(".replace-value").html(str1);
+
+</script>
+</body>
+</html>
